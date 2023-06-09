@@ -11,12 +11,11 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-// Your solution(s) to exercise001 here!
-promise.then(
-  (data) => {
-    console.log(`Yay! Priomise resolved with response: ${data}`); // prints 'All things went well!'
-  },
-  (error) => {
-    console.log(`Boo! Priomise rejected with response: ${error}`); // prints Error object
-  }
-);
+// Using then().catch()
+promise
+  .then((data) => {
+    console.log(`Yay! Priomise resolved with response: ${data}`);
+  })
+  .catch((error) => {
+    console.log(`Boo! Priomise rejected with response: ${error}`);
+  });
