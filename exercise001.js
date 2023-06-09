@@ -12,10 +12,22 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Using then().catch()
-promise
-  .then((data) => {
-    console.log(`Yay! Priomise resolved with response: ${data}`);
-  })
-  .catch((error) => {
-    console.log(`Boo! Priomise rejected with response: ${error}`);
-  });
+// promise
+//   .then((data) => {
+//     console.log(`Yay! Promise resolved with response: ${data}`);
+//   })
+//   .catch((error) => {
+//     console.log(`Boo! Promise rejected with response: ${error}`);
+//   });
+
+// Using async await
+async function getPromiseResponse() {
+  try {
+    const data = await promise;
+    console.log(`Yay! Promise resolved with response: ${data}`);
+  } catch (error) {
+    console.log(`Boo! Promise rejected with response: ${error}`);
+  }
+}
+
+getPromiseResponse();
